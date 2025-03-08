@@ -13,14 +13,14 @@ class BankAccount {
     public:
         void deposit(int amount) {
             if (amount <= 0) {
-                throw invalid_argument("Niali yang diinput tidak boleh kurang atau sama dengan 0");
+                throw invalid_argument("Nilai yang diinput tidak boleh kurang atau sama dengan 0");
             }
             balance += amount;
         }
 
         void withdraw(int amount) {
             if (amount <= 0) {
-                throw invalid_argument("Niali yang diinput tidak boleh kurang atau sama dengan 0");
+                throw invalid_argument("Nilai yang diinput tidak boleh kurang atau sama dengan 0");
             }
             if (balance < amount) {
                 throw invalid_argument("Saldo tidak mencukupi");
@@ -31,7 +31,7 @@ class BankAccount {
 
         void transfer(int amount, BankAccount &destination) {
             if (amount <= 0) {
-                throw invalid_argument("Niali yang diinput tidak boleh kurang atau sama dengan 0");
+                throw invalid_argument("Nilai yang diinput tidak boleh kurang atau sama dengan 0");
             }
             if (balance < amount) {
                 throw invalid_argument("Saldo tidak mencukupi");

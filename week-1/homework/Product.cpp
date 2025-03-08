@@ -37,7 +37,7 @@ class Product {
             this->stock = stock;
             this->discount = discount;
 
-            updatePriceAfterDiscount();
+            this->updatePriceAfterDiscount();
         }
 
         void updatePrice(float price) {
@@ -46,14 +46,14 @@ class Product {
             }
 
             this->price = price;
-            updatePriceAfterDiscount();
+            this->updatePriceAfterDiscount();
         }
 
         void updateDiscount(float price, float discount) {
             if (discount < 0 || discount > 100) {
                 throw invalid_argument("Discount tidak boleh kurang dari 0 atau lebih dari 100");
             }
-            updatePriceAfterDiscount();
+            this->updatePriceAfterDiscount();
         }
 
         void updateStock(int stock) {
